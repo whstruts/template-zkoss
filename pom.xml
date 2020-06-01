@@ -106,6 +106,15 @@
     <build>
         <finalName>${project.artifactId}</finalName>
         <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <jvmArguments>
+                        -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=8080
+                    </jvmArguments>
+                </configuration>
+            </plugin>
             <!-- Run with Jetty -->
             <plugin>
                 <groupId>org.mortbay.jetty</groupId>

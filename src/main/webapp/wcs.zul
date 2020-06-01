@@ -8,7 +8,7 @@
                 <span sclass="z-icon-filter"/>
             </auxheader>
             <auxheader colspan="1">
-                <span sclass="z-icon-refresh"/>
+                <div sclass="z-icon-refresh" onClick="@command('changeFilter')"/>
             </auxheader>
             <auxheader colspan="1">
                 <textbox instant="true" width="100px"
@@ -28,14 +28,14 @@
             <column width="2%">
                 <checkbox hflex="1" />
             </column>
-            <column width="2%">
+            <column width="4%">
             </column>
             <column width="20%">Category</column>
             <column width="20%">Name</column>
             <column width="20%">Top Nutrients</column>
             <column width="10%">% of Daily</column>
             <column width="10%">Calories</column>
-            <column width="26%">Quantity</column>
+            <column width="24%">Quantity</column>
         </columns>
         <template name="model">
             <row>
