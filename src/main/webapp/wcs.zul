@@ -1,14 +1,7 @@
 <zk>
     <window apply="org.zkoss.bind.BindComposer"
-            viewModel="@id('vm')@init('com.tabeldata.MyViewModel')"
+            viewModel="@id('vm')@init('com.tabeldata.MyWCSViewModel')"
             validationMessages="@id('vmsgs')">
-        <label style="color: red" value="Hello World"/>
-        <hlayout>count:
-            <label value="@load(vm.count)"/>
-        </hlayout>
-        <button label="add" onClick="@command('cmd')"/>
-        <button label="sub" onClick="@command('sub')"/>
-        <button label="toWCS" onClick="@command('toWCS')"/>
         <listbox>
             <listitem label="${each}" forEach="Best, Better, God,GodX"/>
         </listbox>
