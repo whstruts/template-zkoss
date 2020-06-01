@@ -1,42 +1,43 @@
-<zk>
-    <window apply="org.zkoss.bind.BindComposer"
-            viewModel="@id('vm')@init('com.tabeldata.MyWCSViewModel')"
-            validationMessages="@id('vmsgs')">
-        <listbox>
-            <listitem label="${each}" forEach="Best, Better, God,GodX"/>
-        </listbox>
-     <listbox  width="550px"  height="120px">
-     <listhead>
-        <listheader label="用户名" align="center"  sort="auto"></listheader>
-        <listheader label="手机号" align="center"   sort="auto"></listheader>
-        <listheader label="分机号" align="center"  sort="auto"></listheader>
-        <listheader label="职位" align="center"    sort="auto"></listheader>
-     </listhead>
-
-        <listitem  id="a"  value="A">
-          <listcell  label="king"/>
-          <listcell  label="130002548"/>
-          <listcell  label="0751-224562"/>
-          <listcell  label="总经理"/>
-        </listitem>
-        <listitem  id="b"  value="B">
-          <listcell  label="华盛顿"/>
-          <listcell  label="130002548"/>
-          <listcell  label="0751-224562"/>
-          <listcell  label="经理"/>
-        </listitem>
-       </listbox>
-          <zscript>
-             String[] data = new String[30];
-             for(int j=0; j &lt; data.length; ++j) {
-                data[j] = "option "+j;
-             }
-             ListModel strset = new SimpleListModel(data);
-          </zscript>
-          <listbox width="200px" rows="10" model="${strset}">
-             <listhead>
-                <listheader label="Load on demend"/>
-             </listhead>
-          </listbox>
-    </window>
-</zk>
+<div viewModel="@id('vm') @init('com.viewmodel.FilterViewModel')">
+    <grid model="@load(vm.foodModel)" height="400px">
+        <auxhead sclass="category-center">
+            <auxheader label="Healthy Food List" colspan="6" />
+        </auxhead>
+        <auxhead sclass="category-center">
+            <auxheader colspan="1">
+                <textbox instant="true" width="100px"
+                         value="@bind(vm.foodFilter.category)" onChange="@command('changeFilter')" />
+            </auxheader>
+            <auxheader colspan="1">
+                <textbox instant="true" width="100px"
+                         value="@bind(vm.foodFilter.name)" onChange="@command('changeFilter')"/>
+            </auxheader>
+            <auxheader colspan="1">
+                <textbox instant="true" width="100px"
+                         value="@bind(vm.foodFilter.nutrients)" onChange="@command('changeFilter')"/>
+            </auxheader>
+            <auxheader label="Detail Data of Foods" colspan="3" />
+        </auxhead>
+        <columns>
+            <column width="20%">Category</column>
+            <column width="20%">Name</column>
+            <column width="20%">Top Nutrients</column>
+            <column width="10%">% of Daily</column>
+            <column width="10%">Calories</column>
+            <column width="20%">Quantity</column>
+        </columns>
+        <template name="model">
+            <row>
+                <label value="@load(each.category)" />
+                <label value="@load(each.name)" />
+                <label value="@load(each.topNutrients)" />
+                <label value="@load(each.dailyPercent)" />
+                <label value="@load(each.calories)" />
+                <label value="@load(each.quantity)" />
+            </row>
+        </template>
+        <foot>
+            <footer span="6" class="footer_right" label="@load(vm.footer)" />
+        </foot>
+    </grid>
+</div>
