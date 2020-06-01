@@ -18,6 +18,11 @@ public class MyViewModel {
     public void cmd() {
         ++count;
     }
+    @Command
+    @NotifyChange("count")
+    public void sub() {
+        --count;
+    }
 
     public int getCount() {
         return count;
