@@ -8,7 +8,7 @@
                 <span sclass="z-icon-filter"/>
             </auxheader>
             <auxheader colspan="1">
-                <div sclass="z-icon-refresh" onClick="@command('changeFilter')"/>
+                <div sclass="z-icon-refresh" />
             </auxheader>
             <auxheader colspan="1">
                 <textbox instant="true" width="100px"
@@ -40,7 +40,11 @@
         <template name="model">
             <row>
                 <checkbox hflex="1" />
-                <span sclass="z-icon-edit"/>
+                <span sclass="z-icon-edit" >
+                    <attribute name="onClick">
+                        int responseCode = Messagebox.show("Question is pressed. Are you sure?", "Question", Messagebox.OK | Messagebox.CANCEL,     Messagebox.QUESTION);
+                    </attribute>
+                </span>
                 <label value="@load(each.category)" />
                 <label value="@load(each.name)" />
                 <label value="@load(each.topNutrients)" />
