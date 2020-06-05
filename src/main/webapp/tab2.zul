@@ -1,0 +1,44 @@
+<zk>
+    <zscript><![CDATA[
+    List products = new ArrayList();
+    for (int i = 1; i <= 5; i++) {
+        products.add("Product #" + i);
+    }
+]]></zscript>
+    <listbox id="listbox" width="100%" nonselectableTags="" checkmark="true" multiple="true">
+        <auxhead>
+            <auxheader colspan="4">Quality Assurance</auxheader>
+        </auxhead>
+        <listhead>
+            <listheader label="Product" width="100px" />
+            <listheader label="Quality" width="100px"/>
+            <listheader label="Comment"  />
+            <listheader label="Confirm" width="80px"/>
+        </listhead>
+        <zk forEach="${products}">
+            <listitem>
+                <listcell label="${each}"></listcell>
+                <listcell>
+                    <listbox mold="select" hflex="1">
+                        <listitem label="Perfect" />
+                        <listitem label="High" />
+                        <listitem label="Medium" selected="true"/>
+                        <listitem label="Low" />
+                        <listitem label="Poor" />
+                    </listbox>
+                </listcell>
+                <listcell>
+                    <textbox rows="2" hflex="1" />
+                </listcell>
+                <listcell>
+                    <button label="confirm" hflex="1">
+                        <attribute name="onClick"><![CDATA[
+                            self.setDisabled(true);
+                        ]]></attribute>
+                    </button>
+                </listcell>
+
+            </listitem>
+        </zk>
+    </listbox>
+</zk>

@@ -1,5 +1,5 @@
 <div viewModel="@id('vm') @init('com.viewmodel.FilterViewModel')">
-    <grid model="@load(vm.foodModel)" height="400px" mold="paging" pageSize="5">
+    <grid model="@load(vm.foodModel)" height="400px" mold="paging" pageSize="5" >
         <auxhead sclass="category-center">
             <auxheader label="Healthy Food List" colspan="8" />
         </auxhead>

@@ -9,7 +9,7 @@
         </tabs>
         <tabpanels>
             <tabpanel><include src="tab1.zul" /></tabpanel>
-            <tabpanel>This is panel B</tabpanel>
+            <tabpanel><include src="tab2.zul" /></tabpanel>
             <tabpanel>This is panel C</tabpanel>
             <tabpanel>This is panel D</tabpanel>
             <tabpanel>This is panel E</tabpanel>
