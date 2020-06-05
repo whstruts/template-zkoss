@@ -4,6 +4,7 @@ import com.model.Food;
 import com.model.FoodData;
 import org.zkoss.bind.annotation.Command;
 import org.zkoss.bind.annotation.NotifyChange;
+import org.zkoss.zk.ui.Executions;
 import org.zkoss.zul.ListModel;
 import org.zkoss.zul.ListModelList;
 
@@ -30,5 +31,10 @@ public class FilterViewModel {
     @NotifyChange({"foodModel", "footer"})
     public void changeFilter() {
         currentFood = FoodData.getFilterFoods(foodFilter);
+    }
+
+    @Command
+    public void toIndex() {
+        Executions.sendRedirect("index.zul");
     }
 }

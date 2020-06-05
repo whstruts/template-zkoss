@@ -8,7 +8,7 @@
                 <span sclass="z-icon-filter"/>
             </auxheader>
             <auxheader colspan="1">
-                <div sclass="z-icon-refresh" />
+                <span sclass="z-icon-refresh" onClick="@command('toIndex')" />
             </auxheader>
             <auxheader colspan="1">
                 <textbox instant="true" width="100px"

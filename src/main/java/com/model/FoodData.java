@@ -9,7 +9,7 @@ import java.util.List;
 public class FoodData {
     private static List<Food> foods = new ArrayList<Food>();
     static {
-        foods.add(new Food("Vegetables", "Asparagus", "Vitamin K", 115, 43, "1 cup - 92 grams"));
+        foods.add(new Food("九州通达科技", "Asparagus", "Vitamin K", 115, 43, "1 cup - 92 grams"));
         foods.add(new Food("Vegetables", "Beets", "Folate", 33, 74, "1 cup - 170 grams"));
         foods.add(new Food("Vegetables", "Bell peppers", "Vitamin C", 291, 24, "1 cup - 92 grams"));
         foods.add(new Food("Vegetables", "Cauliflower", "Vitamin C", 92, 28, "1 cup - 124 grams"));
