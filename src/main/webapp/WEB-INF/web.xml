@@ -6,7 +6,6 @@
 
     <description><![CDATA[My ZK Application]]></description>
     <display-name>template-zkoss</display-name>
-
     <!-- //// -->
     <!-- ZK -->
     <listener>
