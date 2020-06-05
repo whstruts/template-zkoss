@@ -35,6 +35,6 @@ public class FilterViewModel {
 
     @Command
     public void toIndex() {
-        Executions.sendRedirect("index.zul");
+        Executions.sendRedirect("tables.zul");
     }
 }
