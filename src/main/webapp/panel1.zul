@@ -1,0 +1,6 @@
+<?page title="Panel1" contentType="text/html;charset=UTF-8"?>
+<zk>
+    <window title="Panel1" border="normal" width="570px">
+        Panel 1
+    </window>
+</zk>
