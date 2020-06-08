@@ -1,15 +1,16 @@
 <?component name="panel1" macroURI="panel1.zul" ?>
 <zk>
-    <tabbox id="tb" height="300px">
+    <tabbox id="tb" height="600px">
         <tabs id="tabs">
-            <tab id="A" label="tab1" />
-            <tab id="B" label="tab2" />
-            <tab id="C" label="panel1" />
-            <tab id="D" label="Tab D" />
-            <tab id="E" label="Tab E" />
+            <tab id="A" label="收货明细" />
+            <tab id="B" label="批属性" />
+            <tab id="C" label="质检结果" />
+            <tab id="D" label="销退" />
+            <tab id="E" label="收货箱明细" />
+            <tab id="F" label="收货重量信息" />
         </tabs>
         <tabpanels>
-            <tabpanel><include src="tab1.zul" /></tabpanel>
+            <tabpanel><include src="tabRecDetail.zul" /></tabpanel>
             <tabpanel><include src="tab2.zul" /></tabpanel>
             <tabpanel>
                 <div vflex="1">
@@ -18,6 +19,7 @@
             </tabpanel>
             <tabpanel>This is panel D</tabpanel>
             <tabpanel>This is panel E</tabpanel>
+            <tabpanel>This is panel F</tabpanel>
         </tabpanels>
     </tabbox>
 </zk>

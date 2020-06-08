@@ -1,5 +1,5 @@
 <div viewModel="@id('vm') @init('com.viewmodel.LocFilterViewModel')">
-    <grid model="@load(vm.locationModel)" height="400px" mold="paging" pageSize="5" >
+    <grid model="@load(vm.locationModel)" height="300px" mold="paging" pageSize="5" >
         <auxhead sclass="category-center">
             <auxheader label="WCS Location List" colspan="7" />
         </auxhead>
@@ -33,11 +33,11 @@
             </column>
             <column width="4%">
             </column>
-            <column width="20%">Location</column>
-            <column width="20%">qualityType</column>
-            <column width="20%">status</column>
-            <column width="10%">LocType</column>
-            <column width="10%">Area</column>
+            <column width="20%">库位名称</column>
+            <column width="20%">库位类型</column>
+            <column width="20%">状态</column>
+            <column width="10%">库位分类</column>
+            <column width="10%">区域</column>
         </columns>
         <template name="model">
             <row>
