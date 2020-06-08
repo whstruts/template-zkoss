@@ -1,57 +1,56 @@
-
-<grid>
+<div>
+<style>
+        .desc {
+        color: #DC143C;
+        }
+</style>
+<grid fixedLayout="true">
         <zscript><![CDATA[
         String[] languages = {"Ada","Basic","C","C++","CSS","Cobol","Forth","Fortran",
             "Go","Groovy","Haskell","HTML","Java","JavaScript","Lisp","Python","Ruby",
             "Scala","Scheme"};
     ]]></zscript>
         <rows>
-        <row>
-                <groupbox>
-                        <style>
-                                .desc {
-                                color: #DC143C;
-                                }
-                        </style>
+                <row>
                         <hlayout>
                                 <label class="desc" value="*" />
                                 <label value="行号:" />
+                                <textbox />
+                        </hlayout>
+                        <hlayout>
+                                <label value="扩展行号:" />
                                 <textbox/>
                         </hlayout>
-                </groupbox>
-                <hlayout>
-                        <label value="扩展行号:" />
-                        <textbox/>
-                </hlayout>
-                <hlayout>
-                        <label value="状态:" />
-                        <textbox/>
-                </hlayout>
-        </row>
-        <row>
-                <hlayout>
-                        <label value="*" />
-                        <label value="货主:" />
-                        <bandbox id="bd" mold="rounded" autodrop="true">
-                                <bandpopup>
-                                        <listbox height="250px" width="450px" mold="paging" autopaging="true"
-                                                 onSelect="bd.value=self.selectedItem.label; bd.close();">
-                                                <listitem label="${each}" forEach="${languages}" />
-                                        </listbox>
-                                </bandpopup>
-                        </bandbox>
-                </hlayout>
-                <hlayout>
-                        <label value="收货数量:" />
-                        <textbox/>
-                </hlayout>
-                <hlayout>
-                        <label value="冻结码:" />
-                        <textbox/>
-                </hlayout>
-        </row>
+                        <hlayout>
+                                <label value="状态:" />
+                                <textbox/>
+                        </hlayout>
+                </row>
+                <row>
+                        <hlayout>
+                                <label value="*" />
+                                <label value="货主:" />
+                                <bandbox id="bd" mold="rounded" autodrop="true">
+                                        <bandpopup>
+                                                <listbox height="250px" width="450px" mold="paging" autopaging="true"
+                                                         onSelect="bd.value=self.selectedItem.label; bd.close();">
+                                                        <listitem label="${each}" forEach="${languages}" />
+                                                </listbox>
+                                        </bandpopup>
+                                </bandbox>
+                        </hlayout>
+                        <hlayout>
+                                <label value="收货数量:" />
+                                <textbox/>
+                        </hlayout>
+                        <hlayout>
+                                <label value="冻结码:" />
+                                <textbox/>
+                        </hlayout>
+                </row>
         </rows>
 </grid>
+</div>
 
 
 
