@@ -27,7 +27,7 @@ public class MyViewModel {
 
     @Command
     public void toWCS() {
-        Executions.sendRedirect("wcs.zul");
+        Executions.sendRedirect("location.zul");
     }
 
     public int getCount() {
